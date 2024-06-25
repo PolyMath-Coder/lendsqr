@@ -1,7 +1,10 @@
 import express from 'express';
 import { config } from 'dotenv';
-import db from './db/db'
+import db from './config/db'
 import router from './routes/routes';
+import type { Request, RequestHandler, Response } from 'express'
+import StatusCodes from './helpers/enums/statusCodes';
+
 
 config();
 
@@ -22,7 +25,15 @@ app.post('/love', async (req, res) => {
   //  console.log(data)
   
     //res.json(data)
-})
+});
+
+app.all('*', (req: Request, res: Response) => {
+	res.status(StatusCodes.ClientErrorMethodNotAllowed).json({
+		status: false,
+		message: 'invalid route',
+		data: null,
+	});
+});
 
 
 app.listen(3000, () => {
