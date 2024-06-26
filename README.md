@@ -6,6 +6,8 @@
 
 •⁠  ⁠[Postman Documentation](https://documenter.getpostman.com/view/27074715/2sA3drJuxt)
 
+•   [Documented Review of Wallet Service](https://docs.google.com/document/d/1j-9Ya2X0lNJcq33GSG6TKke2HeD-ImZhkugFSjpisgc/edit?usp=sharing)
+
 ## Stack
 
 <div align="center">
