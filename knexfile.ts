@@ -1,5 +1,7 @@
 // Update with your config settings.
 
+import configInv from "./src/config/keys";
+
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
@@ -8,10 +10,10 @@ const config = {
   development: {
     client: 'mysql2',
     connection: {
-      host: 'localhost',
-      user: 'root',
-      password: '',
-      database: 'lendsqr'
+      host: configInv.HOST,
+      user: configInv.USER,
+      password: configInv.PASSWORD,
+      database: configInv.DATABASE
     },
     migrations: {
       tableName: 'knex_migrations',
