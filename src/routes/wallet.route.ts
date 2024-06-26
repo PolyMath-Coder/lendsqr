@@ -8,5 +8,5 @@ walletRouter.post('/fund-wallet', userAuthentication, walletController.fundWalle
 
 walletRouter.post('/fund/transfer', userAuthentication, walletController.fundTransfer)
 
-walletRouter.post('withdraw-fund', userAuthentication, walletController.fundWithdrawal)
+walletRouter.post('/withdraw-fund', userAuthentication, walletController.fundWithdrawal)
 export default walletRouter;

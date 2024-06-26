@@ -52,10 +52,6 @@ class WalletController {
         }
         await walletService.fundWallet(req.user.email, req.body.amount)
 
-        res.status(200).json({
-           status: true,
-           message: 'wallet funded successfully...'
-        })
     }
 }
 
