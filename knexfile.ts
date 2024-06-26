@@ -1,17 +1,17 @@
 // Update with your config settings.
-
+import { config } from 'dotenv'
 import configInv from "./src/config/keys";
-
+config()
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-const config = {
+const configOptions = {
 
   development: {
     client: 'mysql2',
     connection: {
       host: configInv.HOST,
-      user: configInv.USER,
+      user: configInv.DATABASE_USER,
       password: configInv.PASSWORD,
       database: configInv.DATABASE
     },
@@ -54,4 +54,4 @@ const config = {
   // }
 
 };
-export default config
+export default configOptions

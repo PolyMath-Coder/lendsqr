@@ -15,7 +15,8 @@ class AuthService {
     }
     
     async registerUser (name: string, email: string, password: string) {
-      return await db('users').insert({name, email, password});
+      const user = await db('users').insert({name, email, password});
+      console.log(user)
     };
 
     async hashPasswordBcrypt (password: string): Promise<string> {
@@ -33,7 +34,8 @@ class AuthService {
       const lendsqrHeaders = {
         Authorization: `Bearer ${configInv.LENDSQR_SECRET_KEY}`
       }
-      const response = await axios.get(`${configInv.ADJUTOR_BASE_URL}/:${email}`,  
+      console.log(configInv.ADJUTOR_BASE_URL)
+      const response = await axios.get(`${configInv.ADJUTOR_BASE_URL}/verification/karma/:${email}`,  
         { headers: lendsqrHeaders }
       )
       return {

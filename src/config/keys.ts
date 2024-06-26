@@ -6,7 +6,7 @@ const configInv = {
     LENDSQR_SECRET_KEY: process.env.LENDSQR_SECRET_KEY,
     ADJUTOR_BASE_URL: process.env.ADJUTOR_BASE_URL,
     HOST: process.env.HOST,
-    USER: process.env.USER,
+    DATABASE_USER: process.env.DATABASE_USER,
     PASSWORD: process.env.PASSWORD,
     DATABASE: process.env.DATABASE
 
