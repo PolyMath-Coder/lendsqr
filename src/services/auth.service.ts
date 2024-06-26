@@ -15,8 +15,7 @@ class AuthService {
     }
     
     async registerUser (name: string, email: string, password: string) {
-      const user = await db('users').insert({name, email, password});
-      console.log(user)
+      return await db('users').insert({name, email, password});
     };
 
     async hashPasswordBcrypt (password: string): Promise<string> {
@@ -29,12 +28,12 @@ class AuthService {
 	  return sign(userPayload, jwtSigningKey, { expiresIn: '4h' });
   };
    
-    async karmaLookUp (email: string ) {
+    async karmaLookUp (email: string ) { 
       try {
       const lendsqrHeaders = {
         Authorization: `Bearer ${configInv.LENDSQR_SECRET_KEY}`
       }
-      console.log(configInv.ADJUTOR_BASE_URL)
+    
       const response = await axios.get(`${configInv.ADJUTOR_BASE_URL}/verification/karma/:${email}`,  
         { headers: lendsqrHeaders }
       )
