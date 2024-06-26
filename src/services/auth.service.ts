@@ -27,7 +27,6 @@ class AuthService {
   async signJWTtoken (userPayload: userObject) {
 	  return sign(userPayload, jwtSigningKey, { expiresIn: '4h' });
   };
-   
     async karmaLookUp (email: string ) { 
       try {
       const lendsqrHeaders = {
