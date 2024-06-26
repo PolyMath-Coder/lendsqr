@@ -18,7 +18,7 @@ async onboardUser(req: Request, res: Response) {
     await authService.registerUser(name, email.toLowerCase(), hashedPassword)
     
     const jwt = await authService.signJWTtoken(req.body);
-    res.status(200).json({
+    res.status(StatusCodes.SuccessOK).json({
         status: 'success', 
         message: 'user creation successful...',
         token: jwt

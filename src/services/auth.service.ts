@@ -24,7 +24,7 @@ class AuthService {
     };
 
    
-  async signJWTtoken (userPayload: object) {
+  async signJWTtoken (userPayload: userObject) {
 	  return sign(userPayload, jwtSigningKey, { expiresIn: '4h' });
   };
    

@@ -5,5 +5,9 @@ export interface userObject {
 }
 
 export interface UserPayload {
-	
+	name: string;
+	email: string;
+	password: string;
+	iat: number;
+	exp: number
 }

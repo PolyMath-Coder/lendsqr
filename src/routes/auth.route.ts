@@ -1,14 +1,16 @@
 import {Router} from 'express';
 import AuthController from '../controllers/auth.controller';
 import { check } from 'express-validator';
-import inputValidator from '../helpers/validate';
+import inputValidator from '../helpers/validator/validate';
 
 const authRouter = Router()
+
 
 authRouter.post(
     '/register',
     [
-        check('name').isString(),
+        check('name')
+            .isString(),
         check('email')
             .isEmail()
             .withMessage('Enter a valid email address')
