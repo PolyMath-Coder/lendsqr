@@ -15,18 +15,6 @@ const PORT = process.env.PORT
 
 app.use('/api/', router)
 
-app.post('/love', async (req, res) => {
-    const payload = {name: 'ayo', email: 'o;mmy@gmail.com', password: 'password'}
-
-   const check = await db('users').where('email', 'o;mmy@gmail.com')
-   console.log(check)
-   // const data = await db('users').insert(payload)
-
-  //  console.log(data)
-  
-    //res.json(data)
-});
-
 app.all('*', (req: Request, res: Response) => {
 	res.status(StatusCodes.ClientErrorMethodNotAllowed).json({
 		status: false,
