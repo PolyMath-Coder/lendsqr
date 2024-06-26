@@ -6,6 +6,9 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/server.js",
+    "build": "tsc",
+    "build:dev": "rm -rf && tsc",
     "start:watch": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "keywords": [],
