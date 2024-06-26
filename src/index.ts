@@ -15,6 +15,13 @@ const PORT = process.env.PORT
 
 app.use('/api/', router)
 
+app.get('/', (req: Request, res: Response) => {
+    res.status(StatusCodes.ClientErrorMethodNotAllowed).json({
+		status: true,
+		message: 'lendsqr server confirmed.',
+	});
+})
+
 app.all('*', (req: Request, res: Response) => {
 	res.status(StatusCodes.ClientErrorMethodNotAllowed).json({
 		status: false,
