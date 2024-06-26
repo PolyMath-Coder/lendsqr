@@ -1,4 +1,4 @@
-# PayEver Backend Assessment
+# LendSqr Backend Assessment
 
 ---
 
