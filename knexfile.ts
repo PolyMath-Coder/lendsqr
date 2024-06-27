@@ -12,6 +12,7 @@ const configOptions = {
     connection: {
       host: configInv.HOST,
       user: configInv.DATABASE_USER,
+      port: configInv.DATABASE_PORT,
       password: configInv.PASSWORD,
       database: configInv.DATABASE
     },
