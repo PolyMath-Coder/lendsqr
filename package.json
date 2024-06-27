@@ -9,7 +9,8 @@
     "start": "node dist/src/index.js",
     "build": "tsc",
     "build:dev": "rm -rf && tsc",
-    "start:watch": "ts-node-dev --respawn --transpile-only src/index.ts"
+    "start:watch": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "migration:script": "npx knex migrate:latest"
   },
   "keywords": [],
   "author": "Ayooluwa Adeleke",
