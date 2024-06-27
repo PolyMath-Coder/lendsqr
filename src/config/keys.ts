@@ -7,6 +7,7 @@ const configInv = {
     ADJUTOR_BASE_URL: process.env.ADJUTOR_BASE_URL,
     HOST: process.env.HOST,
     DATABASE_USER: process.env.DATABASE_USER,
+    DATABASE_PORT: process.env.DATABASE_PORT,
     PASSWORD: process.env.PASSWORD,
     DATABASE: process.env.DATABASE
 
